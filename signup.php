@@ -1,8 +1,8 @@
-<?php 
+<?php
 session_start();
-    if(isset($_SESSION['single_user'])){ 
-        header('location:index.php');
-    }
+if (isset($_SESSION['single_user'])) {
+    header('location:index.php');
+}
 ?>
 <!doctype html>
 <html class="no-js" lang="en">
@@ -18,9 +18,10 @@ session_start();
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
 
     <!-- CSS
-	============================================ -->
+    ============================================ -->
     <!-- google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900"
+        rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
     <!-- Icon Font CSS -->
@@ -40,7 +41,7 @@ session_start();
     <!-- Main Style CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
-        .success_message{
+        .success_message {
             background: #0DC143;
             color: #eee;
             text-align: center;
@@ -49,6 +50,7 @@ session_start();
             display: none;
             transition: .4s;
         }
+
         .error_message {
             background: #DC4734;
             color: #eee;
@@ -58,7 +60,6 @@ session_start();
             display: none;
             transition: .4s;
         }
-      
     </style>
 
 </head>
@@ -79,25 +80,28 @@ session_start();
                                         </a>
                                     </div>
                                     <div class="timeline-tagline">
-                                        <h6 class="tagline">It’s helps you to connect and share with the people in your life</h6>
+                                        <h6 class="tagline">It’s helps you to connect and share with the people in your
+                                            life</h6>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="login-area">
                                     <form method="POST" action="#" id="login_form">
-                                    <div class="row align-items-center">
-                                        <div class="col-12 col-sm">
-                                            <input type="text" id="lg_username" placeholder="Email or Userame" class="single-field">
+                                        <div class="row align-items-center">
+                                            <div class="col-12 col-sm">
+                                                <input type="text" id="lg_username" placeholder="Email or Userame"
+                                                    class="single-field">
+                                            </div>
+                                            <div class="col-12 col-sm">
+                                                <input type="password" id="lg_password" placeholder="Password"
+                                                    class="single-field">
+                                            </div>
+                                            <div class="col-12 col-sm-auto">
+                                                <input type="submit" id="submit" class="login-btn" value="Login">
+                                            </div>
                                         </div>
-                                        <div class="col-12 col-sm">
-                                            <input type="password" id="lg_password" placeholder="Password" class="single-field">
-                                        </div>
-                                        <div class="col-12 col-sm-auto">
-                                            <input type="submit" id="submit" class="login-btn" value="Login">
-                                        </div>
-                                    </div>
-                                </form>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -107,14 +111,16 @@ session_start();
                     <div class="container-fluid p-0">
                         <div class="row no-gutters">
                             <div class="col-lg-6 order-2 order-lg-1">
-                                <div class="timeline-bg-content bg-img" data-bg="assets/images/timeline/adda-timeline.jpg">
-                                    <h3 class="timeline-bg-title">Let’s see what’s happening to you and your world. Welcome in Adda.</h3>
+                                <div class="timeline-bg-content bg-img"
+                                    data-bg="assets/images/timeline/adda-timeline.jpg">
+                                    <h3 class="timeline-bg-title">Let’s see what’s happening to you and your world.
+                                        Welcome in Adda.</h3>
                                 </div>
                             </div>
                             <div class="col-lg-6 order-1 order-lg-2 d-flex align-items-center justify-content-center">
                                 <div class="signup-form-wrapper">
                                     <div class="success_message " id="log_success_message"></div>
-                                <div class="error_message " id="log_error_message"></div>
+                                    <div class="error_message " id="log_error_message"></div>
 
                                     <h1 class="create-acc text-center">Create An Account</h1>
                                     <div class="signup-inner text-center">
@@ -122,16 +128,20 @@ session_start();
                                         <form class="signup-inner--form" method="POST" action="#" id="reg_form">
                                             <div class="row">
                                                 <div class="col-12">
-                                                    <input type="email" id="email" class="single-field" placeholder="Email">
+                                                    <input type="email" id="email" class="single-field"
+                                                        placeholder="Email">
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <input type="text" id="first_name" class="single-field" placeholder="First Name">
+                                                    <input type="text" id="first_name" class="single-field"
+                                                        placeholder="First Name">
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <input type="text" id="last_name" class="single-field" placeholder="Last Name">
+                                                    <input type="text" id="last_name" class="single-field"
+                                                        placeholder="Last Name">
                                                 </div>
                                                 <div class="col-12">
-                                                    <input type="password" id="rg_password" class="single-field" placeholder="Password">
+                                                    <input type="password" id="rg_password" class="single-field"
+                                                        placeholder="Password">
                                                 </div>
                                                 <div class="col-md-6">
                                                     <select class="nice-select" name="sortby" id="gender">
@@ -157,10 +167,12 @@ session_start();
                                                     </select>
                                                 </div>
                                                 <div class="col-12">
-                                                    <input type="submit" class="submit-btn" id="submit"  value="Create Account">
+                                                    <input type="submit" class="submit-btn" id="submit"
+                                                        value="Create Account">
                                                 </div>
                                             </div>
-                                            <h6 class="terms-condition">I have read & accepted the <a href="#">terms of use</a></h6>
+                                            <h6 class="terms-condition">I have read & accepted the <a href="#">terms of
+                                                    use</a></h6>
                                             <div class="success_message " id="success_message"></div>
                                             <div class="error_message " id="error_message"></div>
                                         </form>
@@ -204,130 +216,130 @@ session_start();
 
     <!-- registration from submite  -->
     <script>
-         $('#reg_form').on('submit',function(event){
-                event.preventDefault();
+        $('#reg_form').on('submit', function (event) {
+            event.preventDefault();
 
-                var email = $('#email').val();
-                var f_name = $('#first_name').val();
-                var l_name = $('#last_name').val();
-                var rg_password = $('#rg_password').val();
-                var gender = $('#gender').val();
-                var age = $('#age').val();
-                var country = $('#country').val();
-               
+            var email = $('#email').val();
+            var f_name = $('#first_name').val();
+            var l_name = $('#last_name').val();
+            var rg_password = $('#rg_password').val();
+            var gender = $('#gender').val();
+            var age = $('#age').val();
+            var country = $('#country').val();
 
-                if (email.length == 0){
-                    $('#error_message').show().text('Email is Required!');
-                    $('#success_message').hide();
-                }
-                else if(f_name.length == 0){
-                    $('#error_message').show().text('First Name is Required!');
-                    $('#success_message').hide();
-                }
-                else if (l_name.length == 0){
-                    $('#error_message').show().text('Last Name is Required!');
-                    $('#success_message').hide();
-                }
-                else if (rg_password.length == 0){
-                    $('#error_message').show().text('Password is Required!');
-                    $('#success_message').hide();
-                }
-                else if (gender == ""){
-                    $('#error_message').show().text('Please Selecte Gender');
-                    $('#success_message').hide();
-                }
-                else if (age == ""){
-                    $('#error_message').show().text('Please Selecte Age');
-                    $('#success_message').hide();
-                }
-                else if (country == ""){
-                    $('#error_message').show().text('Please Selecte Country');
-                    $('#success_message').hide();
-                }
-                else{
-                    $('#error_message').hide();
-                    // $('#success_message').show().text('condition okay');
 
-                    $.ajax({
-                        type: 'POST',
-                        url: 'devlop/ajaxRegistration.php',
-                        data:{
-                            email : email,
-                            f_name : f_name,
-                            l_name : l_name,
-                            rg_password : rg_password,
-                            gender : gender,
-                            age : age,
-                            country : country
-                        },
-                        success:function(response){
-                            if(response == "success"){
-                                $('#success_message').show().text('Registration Successfully Done');
-                                $('#error_message').hide();
-                            }
-                            else if(response == "error"){
-                                $('#error_message').show().text('This email is already exist!');
-                                $('#success_message').hide();
-                            }
-                            else{
-                                $('#error_message').show().text(response);
-                                $('#success_message').hide();
-                            }
+            if (email.length == 0) {
+                $('#error_message').show().text('Email is Required!');
+                $('#success_message').hide();
+            }
+            else if (f_name.length == 0) {
+                $('#error_message').show().text('First Name is Required!');
+                $('#success_message').hide();
+            }
+            else if (l_name.length == 0) {
+                $('#error_message').show().text('Last Name is Required!');
+                $('#success_message').hide();
+            }
+            else if (rg_password.length == 0) {
+                $('#error_message').show().text('Password is Required!');
+                $('#success_message').hide();
+            }
+            else if (gender == "") {
+                $('#error_message').show().text('Please Selecte Gender');
+                $('#success_message').hide();
+            }
+            else if (age == "") {
+                $('#error_message').show().text('Please Selecte Age');
+                $('#success_message').hide();
+            }
+            else if (country == "") {
+                $('#error_message').show().text('Please Selecte Country');
+                $('#success_message').hide();
+            }
+            else {
+                $('#error_message').hide();
+                // $('#success_message').show().text('condition okay');
+
+                $.ajax({
+                    type: 'POST',
+                    url: 'devlop/ajaxRegistration.php',
+                    data: {
+                        email: email,
+                        f_name: f_name,
+                        l_name: l_name,
+                        rg_password: rg_password,
+                        gender: gender,
+                        age: age,
+                        country: country
+                    },
+                    success: function (response) {
+                        if (response == "success") {
+                            $('#success_message').show().text('Registration Successfully Done');
+                            $('#error_message').hide();
                         }
-                    });
-                   
-                }
-              
+                        else if (response == "error") {
+                            $('#error_message').show().text('This email is already exist!');
+                            $('#success_message').hide();
+                        }
+                        else {
+                            $('#error_message').show().text(response);
+                            $('#success_message').hide();
+                        }
+                    }
+                });
+
+            }
+
         });
 
 
         // Login form submite 
 
-        $('#login_form').on('submit',function(event){
+        $('#login_form').on('submit', function (event) {
             event.preventDefault();
             var lg_username = $('#lg_username').val();
             var lg_password = $('#lg_password').val();
 
-            if(lg_username.length == 0){
+            if (lg_username.length == 0) {
                 $('#log_error_message').show().text('Email or Mobile is Required!');
                 $('#log_success_message').hide();
             }
-            else if (lg_password.length == 0){
+            else if (lg_password.length == 0) {
                 $('#log_error_message').show().text('Password is Required!');
                 $('#log_success_message').hide();
             }
-            else{
+            else {
                 // success_message('Condition is success')
 
                 $.ajax({
                     type: 'POST',
                     url: 'devlop/ajaxLogin.php',
-                    data:{
-                        username : lg_username,
-                        password : lg_password
+                    data: {
+                        username: lg_username,
+                        password: lg_password
                     },
-                    success:function(response){
-                        if(response == 'lg error'){
+                    success: function (response) {
+                        if (response == 'lg error') {
                             $('#log_error_message').show().text('Username or Password is wrong');
                             $('#log_success_message').hide();
                         }
-                        else if(response == 'lg success'){
+                        else if (response == 'lg success') {
                             $('#log_success_message').show().text('login Success');
                             $('#log_error_message').hide();
-                            setTimeout(function(){
+                            setTimeout(function () {
                                 window.location = 'index.php';
-                            }, 2000); 
+                            }, 2000);
                         }
-                        else{
+                        else {
                             $('#log_error_message').show().text(response);
                             $('#log_success_message').hide();
                         }
-                        
+
                     }
                 });
             }
-    });
-       
+        });
+
     </script>
 
 </body>
